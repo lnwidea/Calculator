@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>451</width>
+    <height>710</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calculator</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">MainWindow{
+background:#e7e7e7;
+
+}</string>
+  </property>
+  <widget class="QPushButton" name="ACButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#ACButton{
+border:0px;
+background:#e6e6e6;
+}
+#ACButton:hover{
+background:#ffab6e;
+border:2px solid #fff;
+}
+</string>
+   </property>
+   <property name="text">
+    <string notr="true">AC</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deleteButton">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>160</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#deleteButton{
+border:0px;
+background:#e6e6e6;
+}
+#deleteButton:hover{
+background:#8ee5ff;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">&lt;&lt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Backspace, Del</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="percentButton">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>160</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#percentButton{
+border:0px;
+background:#e6e6e6;
+}
+#percentButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">%</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="divideButton">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>160</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#divideButton{
+border:0px;
+background:#e6e6e6;
+}
+#divideButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">/</string>
+   </property>
+   <property name="shortcut">
+    <string>/</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sevenButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>270</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#sevenButton{
+border:0px;
+background:#fff;
+}
+#sevenButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">7</string>
+   </property>
+   <property name="shortcut">
+    <string>7</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="nineButton">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>270</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#nineButton{
+border:0px;
+background:#fff;
+}
+#nineButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">9</string>
+   </property>
+   <property name="shortcut">
+    <string>9</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="multiButton">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>270</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#multiButton{
+border:0px;
+background:#e6e6e6;
+}
+#multiButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">x</string>
+   </property>
+   <property name="shortcut">
+    <string>*</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="eightButton">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>270</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#eightButton{
+border:0px;
+background:#fff;
+}
+#eightButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">8</string>
+   </property>
+   <property name="shortcut">
+    <string>8</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="fourButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>380</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#fourButton{
+border:0px;
+background:#fff;
+}
+#fourButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">4</string>
+   </property>
+   <property name="shortcut">
+    <string>4</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sixButton">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>380</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#sixButton{
+border:0px;
+background:#fff;
+}
+#sixButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">6</string>
+   </property>
+   <property name="shortcut">
+    <string>6</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="minusButton">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>380</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#minusButton{
+border:0px;
+background:#e6e6e6;
+}
+#minusButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">-</string>
+   </property>
+   <property name="shortcut">
+    <string>-</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="fiveButton">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>380</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#fiveButton{
+border:0px;
+background:#fff;
+}
+#fiveButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">5</string>
+   </property>
+   <property name="shortcut">
+    <string>5</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="oneButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>490</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#oneButton{
+border:0px;
+background:#fff;
+}
+#oneButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">1</string>
+   </property>
+   <property name="shortcut">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="threeButton">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>490</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#threeButton{
+border:0px;
+background:#fff;
+}
+#threeButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">3</string>
+   </property>
+   <property name="shortcut">
+    <string>3</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="plusButton">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>490</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#plusButton{
+border:0px;
+background:#e6e6e6;
+}
+#plusButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">+</string>
+   </property>
+   <property name="shortcut">
+    <string>+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="twoButton">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>490</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#twoButton{
+border:0px;
+background:#fff;
+}
+#twoButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">2</string>
+   </property>
+   <property name="shortcut">
+    <string>2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="dotButton">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>600</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#dotButton{
+border:0px;
+background:#e6e6e6;
+}
+#dotButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">.</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="equalButton">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>600</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#equalButton{
+border:0px;
+background:#93ffa5;
+}
+#equalButton:hover{
+background:#7eda8d;
+border:2px solid #fff;
+color:#fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">=</string>
+   </property>
+   <property name="shortcut">
+    <string>=, Enter</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="plus_minusButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>600</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#plus_minusButton{
+border:0px;
+background:#e6e6e6;
+}
+#plus_minusButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">+/-</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="zeroButton">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>600</y>
+     <width>91</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#zeroButton{
+border:0px;
+background:#fff;
+}
+#zeroButton:hover{
+background:#bebebe;
+border:2px solid #fff;
+}</string>
+   </property>
+   <property name="text">
+    <string notr="true">0</string>
+   </property>
+   <property name="shortcut">
+    <string>0</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>431</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#lineEdit{
+background: #e6e6e6;
+border:0px;
+color:black;
+font-size:50px;
+}</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string>0</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
